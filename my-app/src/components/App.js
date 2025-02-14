@@ -1,21 +1,20 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import HomePage from './components/HomePage';
-import DataViz from './components/DataViz';
 import './App.css';
 
 function App() {
     return (
-        <BrowserRouter>
+        <Router>
             <div>
                 <Navbar />
                 <Routes>
                     <Route path="/" element={<HomePage />} />
-                    <Route path="/dataviz" element={<DataViz />} />
+                    {/* Add other routes as needed */}
                 </Routes>
             </div>
-        </BrowserRouter>
+        </Router>
     );
 }
 

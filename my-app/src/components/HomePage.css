@@ -1,0 +1,141 @@
+/* Portfolio Image Container */
+.portfolio-image-container {
+    width: 280px;
+    height: 280px;
+  }
+  
+  /* Portfolio Image */
+  .portfolio-image {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+  }
+  
+  /* Grayscale to Color Effect */
+  .color {
+    filter: grayscale(100%);
+    transition: filter 1s ease;
+  }
+  
+  .color:hover {
+    filter: grayscale(0%);
+  }
+  
+  /* Social Icons */
+  .social-icon {
+    transition: color 0.3s ease, transform 0.3s ease;
+    color: var(--dark-blue);
+  }
+  
+  .social-icon:hover {
+    color: var(--medium-blue);
+    transform: scale(1.2);
+  }
+  
+  /* Button Styles */
+  .btn {
+    overflow: visible;
+    margin: 0;
+    padding: 16px 36px 22px;
+    border: 2px solid var(--dark-blue);
+    border-radius: 6px;
+    background: #fff;
+    color: var(--dark-blue);
+    font: inherit;
+    line-height: normal;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    transition: all 0.5s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .btn:after {
+    content: '';
+    display: block;
+    height: 7px;
+    width: 100%;
+    background-image: repeating-linear-gradient(
+      45deg,
+      var(--dark-blue),
+      var(--dark-blue) 1px,
+      transparent 2px,
+      transparent 5px
+    );
+    backface-visibility: hidden;
+    border-top: 1px solid var(--dark-blue);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-size: 7px 7px;
+  }
+  
+  .btn:hover {
+    background-color: var(--dark-blue);
+    color: #fff;
+    border-color: #000;
+  }
+  
+  .btn:hover:after {
+    background-image: repeating-linear-gradient(
+      45deg,
+      #fff,
+      #fff 1px,
+      transparent 2px,
+      transparent 5px
+    );
+    border-top: 1px solid #000;
+    animation: stripe-slide 12s infinite linear forwards;
+  }
+  
+  /* Button Animation */
+  @keyframes stripe-slide {
+    0% { background-position: 0% 0; }
+    100% { background-position: 100% 0; }
+  }
+  
+  /* Responsive Adjustments */
+  @media (min-width: 768px) {
+    .portfolio-image-container {
+      width: 300px;
+      height: 300px;
+    }
+  }
+  
+  /* Content Container */
+  .content-container {
+    background: white;
+    padding: 5rem 0;
+  }
+  
+  /* Heading Styles */
+  .h1-primary {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark-blue);
+    position: relative;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+  
+  .h1-primary::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--medium-blue);
+    margin-top: 0.5rem;
+    transition: width 0.3s ease;
+  }
+  
+  /* Responsive Typography */
+  @media (max-width: 768px) {
+    .h1-primary {
+      font-size: 2rem;
+    }
+  }

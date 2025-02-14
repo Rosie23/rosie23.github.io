@@ -1,38 +1,130 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* App Container */
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh;
+  text-align: center;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Global Content Container */
+.content-container {
+  background: white;
+  padding: 5rem 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Portfolio Image Hover Effects */
+
+/* 1. Glowing Border Effect */
+.hover-glow {
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 15px rgba(120, 134, 199, 0.6);
+  border: 3px solid rgba(120, 134, 199, 0.5);
+}
+
+/* 2. Subtle Zoom on Hover */
+.hover-zoom {
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.hover-zoom:hover {
+  transform: scale(1.05);
+}
+
+/* 3. Rotate and Tilt Effect */
+.hover-rotate {
+  transition: all 0.4s ease;
+}
+
+.hover-rotate:hover {
+  transform: rotate(3deg) scale(1.02);
+  box-shadow: 0 10px 20px rgba(45, 51, 107, 0.2);
+}
+
+/* 4. Color Overlay Effect */
+.hover-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.hover-overlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(120, 134, 199, 0.3);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.hover-overlay:hover::before {
+  opacity: 1;
+}
+
+/* 5. Gradient Border Reveal */
+.hover-border-gradient {
+  position: relative;
+  border: 3px solid transparent;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  transition: all 0.3s ease;
+}
+
+.hover-border-gradient::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  margin: -3px;
+  background: linear-gradient(to right, 
+      rgba(120, 134, 199, 0.5), 
+      rgba(45, 51, 107, 0.5));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.hover-border-gradient:hover::before {
+  opacity: 1;
+}
+
+/* 6. Animated Pulse Effect */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(120, 134, 199, 0.4);
   }
-  to {
-    transform: rotate(360deg);
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(120, 134, 199, 0);
   }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(120, 134, 199, 0);
+  }
+}
+
+.hover-pulse:hover {
+  animation: pulse 1.5s infinite;
+}
+
+/* Set minimum height for pages */
+#root {
+  min-height: 100vh;
+}
+
+/* Ensure content is below fixed navbar */
+main {
+  padding-top: 80px; /* Adjust based on your navbar height */
 }
