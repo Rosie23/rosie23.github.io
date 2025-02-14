@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/rosie23/static/css/main.571c9323.css",
-    "main.js": "/rosie23/static/js/main.d02db051.js",
-    "static/js/488.7a876c9d.chunk.js": "/rosie23/static/js/488.7a876c9d.chunk.js",
-    "index.html": "/rosie23/index.html",
-    "main.571c9323.css.map": "/rosie23/static/css/main.571c9323.css.map",
-    "main.d02db051.js.map": "/rosie23/static/js/main.d02db051.js.map",
-    "488.7a876c9d.chunk.js.map": "/rosie23/static/js/488.7a876c9d.chunk.js.map"
+    "main.css": "/static/css/main.571c9323.css",
+    "main.js": "/static/js/main.cfe3a2a5.js",
+    "static/js/488.7a876c9d.chunk.js": "/static/js/488.7a876c9d.chunk.js",
+    "index.html": "/index.html",
+    "main.571c9323.css.map": "/static/css/main.571c9323.css.map",
+    "main.cfe3a2a5.js.map": "/static/js/main.cfe3a2a5.js.map",
+    "488.7a876c9d.chunk.js.map": "/static/js/488.7a876c9d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.571c9323.css",
-    "static/js/main.d02db051.js"
+    "static/js/main.cfe3a2a5.js"
   ]
 }
