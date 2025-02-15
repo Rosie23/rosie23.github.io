@@ -1,9 +1,11 @@
+
 .gallery-container {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 120px 1fr;
     gap: 20px;
     padding: 50px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .thumbnail-column {
@@ -31,15 +33,15 @@
 }
 
 .main-content {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
     gap: 20px;
-    max-width: 1000px;
 }
 
 .main-image-container {
-    width: 550px;
-    height: 550px;
+    width: 100%;
+    aspect-ratio: 1/1;
+    max-height: 450px;
 }
 
 .main-image {
@@ -55,6 +57,7 @@
     overflow: hidden;
     font-family: 'Fira Code', monospace;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100%;
 }
 
 .code-header {
@@ -95,38 +98,13 @@
     overflow-y: auto;
 }
 
-/* Responsive styles */
-@media (max-width: 1200px) {
-    .main-content {
-        flex-direction: column;
-    }
-    
-    .main-image-container {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 1;
-        max-width: 550px;
-    }
-}
-
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .gallery-container {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr;
         padding: 20px;
     }
 
-    .thumbnail-column {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
     .main-content {
-        width: 100%;
-    }
-
-    .code-container {
-        margin-top: 20px;
+        grid-template-columns: 1fr;
     }
 }
