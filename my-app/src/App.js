@@ -4,6 +4,7 @@ import Navbar from './components/Navbar/Navbar';
 import HomePage from './components/HomePage/HomePage';
 import DataViz from './components/DataViz/DataViz';
 import BlogPage from './components/BlogPage/BlogPage';
+import NeuroShinyPage from './components/NeuroShinyPage';
 import './index.css';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/dataviz" element={<DataViz />} />
           <Route path="/blog" element={<BlogPage />} />
+          <Route path="/shiny" element={<NeuroShinyPage />} />
         </Routes>
       </div>
     </BrowserRouter>

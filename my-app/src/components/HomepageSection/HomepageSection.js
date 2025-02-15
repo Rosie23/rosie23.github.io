@@ -22,9 +22,9 @@ const HomepageSection = () => {
             </div>
           </div>
           <div className="w-full md:w-2/3 space-y-4">
-            <h2 className="text-3xl font-bold text-gray-800">{aboutMeContent.title}</h2>
+            <h2 className="section-title">{aboutMeContent.title}</h2>
             {aboutMeContent.mainText.map((paragraph, index) => (
-              <p key={index} className="text-lg text-gray-600 mb-4">
+              <p key={index} className="content-paragraph">
                 {paragraph}
               </p>
             ))}
