@@ -14,7 +14,7 @@ const BioImage = () => {
         <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="social-icon">
           <i className="fab fa-github fa-2x"></i>
         </a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon">
+        <a href="https://www.linkedin.com/in/rosie-griffiths" target="_blank" rel="noopener noreferrer" className="social-icon">
           <i className="fab fa-linkedin fa-2x"></i>
         </a>
         <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="social-icon">
